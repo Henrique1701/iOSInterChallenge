@@ -1,4 +1,3 @@
-import Alamofire
 import UIKit
 
 class PostTableViewController: UITableViewController {
@@ -16,24 +15,18 @@ class PostTableViewController: UITableViewController {
     }
     
     private func fillPosts(from userId: Int) {
-        AF.request("https://jsonplaceholder.typicode.com/posts?userId=\(userId)").validate().responseJSON { response in
-            guard response.error == nil else {
+        NetworkService.shared.getPosts(userId: userId) { posts, error in
+            if let posts = posts {
+                self.posts = posts
+                self.tableView.reloadData()
+                return
+            } else {
                 let alert = UIAlertController(title: "Erro", message: "Algo errado aconteceu. Tente novamente mais tarde.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
                     alert.dismiss(animated: true)
                 }))
                 self.present(alert, animated: true)
                 return
-            }
-            
-            do {
-                if let data = response.data {
-                    let models = try JSONDecoder().decode([Post].self, from: data)
-                    self.posts = models
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
             }
         }
     }

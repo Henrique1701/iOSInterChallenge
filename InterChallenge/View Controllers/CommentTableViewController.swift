@@ -1,4 +1,3 @@
-import Alamofire
 import UIKit
 
 class CommentTableViewController: UITableViewController {
@@ -16,24 +15,18 @@ class CommentTableViewController: UITableViewController {
     }
     
     private func fillComments(from postId: Int) {
-        AF.request("https://jsonplaceholder.typicode.com/comments?postId=\(postId)").validate().responseJSON { response in
-            guard response.error == nil else {
+        NetworkService.shared.getComments(postId: postId) { comments, error in
+            if let comments = comments {
+                self.comments = comments
+                self.tableView.reloadData()
+                return
+            } else {
                 let alert = UIAlertController(title: "Erro", message: "Algo errado aconteceu. Tente novamente mais tarde.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
                     alert.dismiss(animated: true)
                 }))
                 self.present(alert, animated: true)
                 return
-            }
-            
-            do {
-                if let data = response.data {
-                    let models = try JSONDecoder().decode([Comment].self, from: data)
-                    self.comments = models
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
             }
         }
    }

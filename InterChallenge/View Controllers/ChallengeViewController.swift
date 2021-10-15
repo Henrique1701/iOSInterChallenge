@@ -1,4 +1,3 @@
-import Alamofire
 import UIKit
 
 class ChallengeViewController: UITableViewController {
@@ -12,24 +11,18 @@ class ChallengeViewController: UITableViewController {
     }
     
     private func fillUsers() {
-        AF.request("https://jsonplaceholder.typicode.com/users").validate().responseJSON { response in
-            guard response.error == nil else {
+        NetworkService.shared.getUsers() { users, error in
+            if let users = users {
+                self.users = users
+                self.tableView.reloadData()
+                return
+            } else {
                 let alert = UIAlertController(title: "Erro", message: "Algo errado aconteceu. Tente novamente mais tarde.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
                     alert.dismiss(animated: true)
                 }))
                 self.present(alert, animated: true)
                 return
-            }
-            
-            do {
-                if let data = response.data {
-                    let models = try JSONDecoder().decode([User].self, from: data)
-                    self.users = models
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
             }
         }
     }
