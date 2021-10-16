@@ -42,7 +42,6 @@
 		BEC31FCA271A6DB800D541CD /* AlbumTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FC9271A6DB800D541CD /* AlbumTableView.swift */; };
 		BEC31FCC271A6E0D00D541CD /* AlbumNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FCB271A6E0D00D541CD /* AlbumNavigation.swift */; };
 		BEC31FCF271A6EAC00D541CD /* PhotoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FCE271A6EAC00D541CD /* PhotoTableView.swift */; };
-		BEC31FD1271A6F0400D541CD /* PhotoNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FD0271A6F0400D541CD /* PhotoNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,7 +165,6 @@
 		BEC31FC9271A6DB800D541CD /* AlbumTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableView.swift; sourceTree = "<group>"; };
 		BEC31FCB271A6E0D00D541CD /* AlbumNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumNavigation.swift; sourceTree = "<group>"; };
 		BEC31FCE271A6EAC00D541CD /* PhotoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableView.swift; sourceTree = "<group>"; };
-		BEC31FD0271A6F0400D541CD /* PhotoNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,7 +409,6 @@
 			children = (
 				BA0CF8F926336FEB007BDFC8 /* PhotoTableViewController.swift */,
 				BEC31FCE271A6EAC00D541CD /* PhotoTableView.swift */,
-				BEC31FD0271A6F0400D541CD /* PhotoNavigation.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -620,7 +617,6 @@
 				BA0CF8F526336DB5007BDFC8 /* PhotoTableViewCell.swift in Sources */,
 				BA0CF8EF26336B59007BDFC8 /* Album.swift in Sources */,
 				BA0CF8C12632F7E3007BDFC8 /* User.swift in Sources */,
-				BEC31FD1271A6F0400D541CD /* PhotoNavigation.swift in Sources */,
 				BEC31F932719019300D541CD /* NetworkService.swift in Sources */,
 				BA0CF8EB26336B40007BDFC8 /* AlbumTableViewController.swift in Sources */,
 				BEC31FC7271A6D0600D541CD /* CommentTableView.swift in Sources */,
