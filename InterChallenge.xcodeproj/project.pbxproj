@@ -246,17 +246,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BA0CF8C626334817007BDFC8 /* View Controllers */ = {
+		BA0CF8C626334817007BDFC8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BEC31FCD271A6E7E00D541CD /* Photo */,
-				BEC31FC8271A6D8C00D541CD /* Album */,
-				BEC31FC5271A6CC600D541CD /* Comment */,
-				BEC31FC0271A5E7C00D541CD /* Post */,
 				BEC31FBF271A5B3300D541CD /* Challenge */,
-				BA0CF9012633764E007BDFC8 /* DetailsViewController.swift */,
+				BEC31FC0271A5E7C00D541CD /* Post */,
+				BEC31FC5271A6CC600D541CD /* Comment */,
+				BEC31FC8271A6D8C00D541CD /* Album */,
+				BEC31FCD271A6E7E00D541CD /* Photo */,
+				BEC31FD2271A6F8D00D541CD /* Details */,
 			);
-			path = "View Controllers";
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		BA0CF8C926334B6D007BDFC8 /* User */ = {
@@ -321,7 +321,7 @@
 			children = (
 				BEC31FB4271A528F00D541CD /* Extensions */,
 				BEC31F8A2719013500D541CD /* Services */,
-				BA0CF8C626334817007BDFC8 /* View Controllers */,
+				BA0CF8C626334817007BDFC8 /* ViewControllers */,
 				BA0CF8BF2632F7CD007BDFC8 /* Models */,
 				BA0CF8B62632F552007BDFC8 /* Cells */,
 				BA93F7EB2632035800CE8AFF /* AppDelegate.swift */,
@@ -415,6 +415,14 @@
 				BEC31FD0271A6F0400D541CD /* PhotoNavigation.swift */,
 			);
 			path = Photo;
+			sourceTree = "<group>";
+		};
+		BEC31FD2271A6F8D00D541CD /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				BA0CF9012633764E007BDFC8 /* DetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
