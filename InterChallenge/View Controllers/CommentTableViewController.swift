@@ -21,11 +21,7 @@ class CommentTableViewController: UITableViewController {
                 self.tableView.reloadData()
                 return
             } else {
-                let alert = UIAlertController(title: "Erro", message: "Algo errado aconteceu. Tente novamente mais tarde.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
-                    alert.dismiss(animated: true)
-                }))
-                self.present(alert, animated: true)
+                self.showErrorAlert()
                 return
             }
         }
