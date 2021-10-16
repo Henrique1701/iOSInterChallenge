@@ -6,6 +6,9 @@ class ChallengeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Desafio"
+        
         setUpTableView()
         fillUsers()
     }
