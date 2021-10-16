@@ -11,7 +11,8 @@ import UIKit
 extension PhotoTableViewController {
     
     func setUpTableView() {
-        tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoCell")
+        tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: "PhotoCell")
+        tableView.estimatedRowHeight = 173
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
