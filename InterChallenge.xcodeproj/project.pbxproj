@@ -307,7 +307,6 @@
 				BA93F7EB2632035800CE8AFF /* AppDelegate.swift */,
 				BA93F7ED2632035800CE8AFF /* SceneDelegate.swift */,
 				BA93F7F42632035A00CE8AFF /* Assets.xcassets */,
-				BA93F7F62632035A00CE8AFF /* LaunchScreen.storyboard */,
 				BA93F7F92632035A00CE8AFF /* Info.plist */,
 			);
 			path = InterChallenge;
@@ -335,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				BE768EE5271B786F00A4E4CF /* DetailsView.swift */,
+				BA93F7F62632035A00CE8AFF /* LaunchScreen.storyboard */,
 				BA0CF8B62632F552007BDFC8 /* Cells */,
 			);
 			path = Views;
