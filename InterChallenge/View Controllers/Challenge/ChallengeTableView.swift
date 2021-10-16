@@ -1,26 +1,17 @@
+//
+//  ChallengeTableView.swift
+//  InterChallenge
+//
+//  Created by José Henrique Fernandes Silva on 15/10/21.
+//
+
+import Foundation
 import UIKit
 
-class ChallengeViewController: UITableViewController {
+extension ChallengeTableViewController {
     
-    var users = [User]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func setUpTableView() {
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCell")
-        fillUsers()
-    }
-    
-    private func fillUsers() {
-        NetworkService.shared.getUsers() { users, error in
-            if let users = users {
-                self.users = users
-                self.tableView.reloadData()
-                return
-            } else {
-                self.showErrorAlert()
-                return
-            }
-        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,27 +34,9 @@ class ChallengeViewController: UITableViewController {
         cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? .white : UIColor(white: 0.667, alpha: 0.2)
         return cell
     }
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? AlbumTableViewController {
-            if let info = sender as? (id: Int, name: String) {
-                destinationVC.userId = info.id
-                destinationVC.userName = info.name
-            }
-        }
-        
-        if let destinationVC = segue.destination as? PostTableViewController {
-            if let info = sender as? (id: Int, name: String) {
-                destinationVC.userId = info.id
-                destinationVC.userName = info.name
-            }
-        }
-    }
 }
 
-extension ChallengeViewController: UserTableViewCellDelegate {
+extension ChallengeTableViewController: UserTableViewCellDelegate {
     func didTapAlbums(with userId: Int, by name: String) {
         let userIdAndName = (id: userId, name: name)
         performSegue(withIdentifier: "challengeToAlbum", sender: userIdAndName)
