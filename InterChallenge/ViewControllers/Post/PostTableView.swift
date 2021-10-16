@@ -11,8 +11,8 @@ import UIKit
 extension PostTableViewController {
     
     func setUpTableView() {
-        tableView.register(UINib(nibName: "TitleAndDescriptionTableViewCell", bundle: nil),
-                                   forCellReuseIdentifier: "TitleAndDescriptionCell")
+        tableView.register(TitleAndDescriptionTableViewCell.self, forCellReuseIdentifier: "TitleAndDescriptionCell")
+        tableView.estimatedRowHeight = 97
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
