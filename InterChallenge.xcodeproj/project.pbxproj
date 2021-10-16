@@ -41,6 +41,7 @@
 		BEC31FBE271A5B1000D541CD /* ChallengeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FBD271A5B1000D541CD /* ChallengeTableView.swift */; };
 		BEC31FC2271A5E9800D541CD /* PostTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FC1271A5E9700D541CD /* PostTableView.swift */; };
 		BEC31FC4271A5F3E00D541CD /* PostNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FC3271A5F3E00D541CD /* PostNavigation.swift */; };
+		BEC31FC7271A6D0600D541CD /* CommentTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FC6271A6D0600D541CD /* CommentTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		BEC31FBD271A5B1000D541CD /* ChallengeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeTableView.swift; sourceTree = "<group>"; };
 		BEC31FC1271A5E9700D541CD /* PostTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableView.swift; sourceTree = "<group>"; };
 		BEC31FC3271A5F3E00D541CD /* PostNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNavigation.swift; sourceTree = "<group>"; };
+		BEC31FC6271A6D0600D541CD /* CommentTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,9 +241,9 @@
 		BA0CF8C626334817007BDFC8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BEC31FC5271A6CC600D541CD /* Comment */,
 				BEC31FC0271A5E7C00D541CD /* Post */,
 				BEC31FBF271A5B3300D541CD /* Challenge */,
-				BA0CF8D526334FF0007BDFC8 /* CommentTableViewController.swift */,
 				BA0CF8EA26336B40007BDFC8 /* AlbumTableViewController.swift */,
 				BA0CF8F926336FEB007BDFC8 /* PhotoTableViewController.swift */,
 				BA0CF9012633764E007BDFC8 /* DetailsViewController.swift */,
@@ -376,6 +378,15 @@
 				BEC31FC3271A5F3E00D541CD /* PostNavigation.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		BEC31FC5271A6CC600D541CD /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				BA0CF8D526334FF0007BDFC8 /* CommentTableViewController.swift */,
+				BEC31FC6271A6D0600D541CD /* CommentTableView.swift */,
+			);
+			path = Comment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -578,6 +589,7 @@
 				BA0CF8C12632F7E3007BDFC8 /* User.swift in Sources */,
 				BEC31F932719019300D541CD /* NetworkService.swift in Sources */,
 				BA0CF8EB26336B40007BDFC8 /* AlbumTableViewController.swift in Sources */,
+				BEC31FC7271A6D0600D541CD /* CommentTableView.swift in Sources */,
 				BA0CF8B92632F566007BDFC8 /* UserTableViewCell.swift in Sources */,
 				BA0CF8D626334FF0007BDFC8 /* CommentTableViewController.swift in Sources */,
 				BA0CF8E426336A9A007BDFC8 /* AlbumTableViewCell.swift in Sources */,
