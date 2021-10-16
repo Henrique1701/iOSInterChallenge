@@ -11,7 +11,8 @@ import UIKit
 extension AlbumTableViewController {
     
     func setUpTableView() {
-        tableView.register(UINib(nibName: "AlbumTableViewCell", bundle: nil), forCellReuseIdentifier: "AlbumCell")
+        tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "AlbumCell")
+        tableView.estimatedRowHeight = 44
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,7 +24,7 @@ extension AlbumTableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as? AlbumTableViewCell else {
             return UITableViewCell()
         }
-
+        print("===================")
         let album = albums[indexPath.row]
         cell.albumNameLabel.text = album.title
 
