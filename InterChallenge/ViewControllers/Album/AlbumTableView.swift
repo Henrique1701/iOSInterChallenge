@@ -33,6 +33,10 @@ extension AlbumTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let albumId = albums[indexPath.row].id
-        performSegue(withIdentifier: "albumToPhoto", sender: albumId)
+        let photoTableViewCntroller = PhotoTableViewController()
+        photoTableViewCntroller.userName = userName
+        photoTableViewCntroller.albumId = albumId
+        self.navigationController?.pushViewController(photoTableViewCntroller, animated: true)
+        //performSegue(withIdentifier: "albumToPhoto", sender: albumId)
     }
 }

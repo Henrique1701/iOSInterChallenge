@@ -42,10 +42,10 @@ extension PhotoTableViewController {
         let photo = photos[indexPath.row]
         NetworkService.shared.downloadImageData(url: photo.url) { data, error in
             if let data = data {
-                let detailsVC = DetailsViewController()
-                detailsVC.photo = UIImage(data: data)!
-                detailsVC.name = photo.title
-                self.navigationController?.pushViewController(detailsVC, animated: true)
+                let detailsViewController = DetailsViewController()
+                detailsViewController.photo = UIImage(data: data)!
+                detailsViewController.name = photo.title
+                self.navigationController?.pushViewController(detailsViewController, animated: true)
             } else {
                 self.showErrorAlert()
             }

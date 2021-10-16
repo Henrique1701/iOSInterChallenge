@@ -39,12 +39,16 @@ extension ChallengeTableViewController {
 
 extension ChallengeTableViewController: UserTableViewCellDelegate {
     func didTapAlbums(with userId: Int, by name: String) {
-        let userIdAndName = (id: userId, name: name)
-        performSegue(withIdentifier: "challengeToAlbum", sender: userIdAndName)
+        let albumTableViewController = AlbumTableViewController()
+        albumTableViewController.userId = userId
+        albumTableViewController.userName = name
+        self.navigationController?.pushViewController(albumTableViewController, animated: true)
     }
     
     func didTapPosts(with userId: Int, by name: String) {
-        let userIdAndName = (id: userId, name: name)
-        performSegue(withIdentifier: "challengeToPost", sender: userIdAndName)
+        let postTableViewCotroller = PostTableViewController()
+        postTableViewCotroller.userId = userId
+        postTableViewCotroller.userName = name
+        self.navigationController?.pushViewController(postTableViewCotroller, animated: true)
     }
 }

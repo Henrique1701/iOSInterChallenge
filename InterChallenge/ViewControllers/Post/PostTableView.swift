@@ -34,6 +34,9 @@ extension PostTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let postId = posts[indexPath.row].id
-        performSegue(withIdentifier: "postToComment", sender: postId)
+        let commentTableViewController = CommentTableViewController()
+        commentTableViewController.userName = userName
+        commentTableViewController.postId = postId
+        self.navigationController?.pushViewController(commentTableViewController, animated: true)
     }
 }
