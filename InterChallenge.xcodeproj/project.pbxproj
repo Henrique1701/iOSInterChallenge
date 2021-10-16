@@ -31,6 +31,7 @@
 		BA93F7F82632035A00CE8AFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA93F7F62632035A00CE8AFF /* LaunchScreen.storyboard */; };
 		BA93F8032632035A00CE8AFF /* InterChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93F8022632035A00CE8AFF /* InterChallengeTests.swift */; };
 		BA93F80E2632035A00CE8AFF /* InterChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93F80D2632035A00CE8AFF /* InterChallengeUITests.swift */; };
+		BE768EE6271B786F00A4E4CF /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE768EE5271B786F00A4E4CF /* DetailsView.swift */; };
 		BEC31F932719019300D541CD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31F922719019300D541CD /* NetworkService.swift */; };
 		BEC31FB6271A52FE00D541CD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FB5271A52FE00D541CD /* UIViewController.swift */; };
 		BEC31FBC271A5A2800D541CD /* ChallengeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC31FBB271A5A2800D541CD /* ChallengeNavigation.swift */; };
@@ -154,6 +155,7 @@
 		BA93F8092632035A00CE8AFF /* InterChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA93F80D2632035A00CE8AFF /* InterChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterChallengeUITests.swift; sourceTree = "<group>"; };
 		BA93F80F2632035A00CE8AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE768EE5271B786F00A4E4CF /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		BEC31F922719019300D541CD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		BEC31FB5271A52FE00D541CD /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BEC31FBB271A5A2800D541CD /* ChallengeNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeNavigation.swift; sourceTree = "<group>"; };
@@ -309,8 +311,9 @@
 			children = (
 				BEC31FB4271A528F00D541CD /* Extensions */,
 				BEC31F8A2719013500D541CD /* Services */,
-				BA0CF8C626334817007BDFC8 /* ViewControllers */,
 				BA0CF8BF2632F7CD007BDFC8 /* Models */,
+				BE768EDD271B781600A4E4CF /* Views */,
+				BA0CF8C626334817007BDFC8 /* ViewControllers */,
 				BA0CF8B62632F552007BDFC8 /* Cells */,
 				BA93F7EB2632035800CE8AFF /* AppDelegate.swift */,
 				BA93F7ED2632035800CE8AFF /* SceneDelegate.swift */,
@@ -338,6 +341,14 @@
 				BA93F80F2632035A00CE8AFF /* Info.plist */,
 			);
 			path = InterChallengeUITests;
+			sourceTree = "<group>";
+		};
+		BE768EDD271B781600A4E4CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE768EE5271B786F00A4E4CF /* DetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BEC31F8A2719013500D541CD /* Services */ = {
@@ -605,6 +616,7 @@
 				BA0CF8FE26337023007BDFC8 /* Photo.swift in Sources */,
 				BEC31FC2271A5E9800D541CD /* PostTableView.swift in Sources */,
 				BEC31FCF271A6EAC00D541CD /* PhotoTableView.swift in Sources */,
+				BE768EE6271B786F00A4E4CF /* DetailsView.swift in Sources */,
 				BA0CF8F526336DB5007BDFC8 /* PhotoTableViewCell.swift in Sources */,
 				BA0CF8EF26336B59007BDFC8 /* Album.swift in Sources */,
 				BA0CF8C12632F7E3007BDFC8 /* User.swift in Sources */,

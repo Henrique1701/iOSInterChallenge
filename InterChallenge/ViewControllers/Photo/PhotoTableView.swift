@@ -42,8 +42,12 @@ extension PhotoTableViewController {
         let photo = photos[indexPath.row]
         NetworkService.shared.downloadImageData(url: photo.url) { data, error in
             if let data = data {
-                self.performSegue(withIdentifier: "photoToDetail",
-                                  sender: (photo: UIImage(data: data), name: photo.title))
+                let detailsVC = DetailsViewController()
+                detailsVC.photo = UIImage(data: data)!
+                detailsVC.name = photo.title
+                self.navigationController?.pushViewController(detailsVC, animated: true)
+            } else {
+                self.showErrorAlert()
             }
         }
     }
