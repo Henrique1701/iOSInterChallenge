@@ -1,31 +1,19 @@
+//
+//  PhotoTableView.swift
+//  InterChallenge
+//
+//  Created by José Henrique Fernandes Silva on 15/10/21.
+//
+
+import Foundation
 import UIKit
 
-class PhotoTableViewController: UITableViewController {
-
-    var albumId = Int()
-    var userName = String()
-    var photos = [Photo]()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.title = "Fotos de \(userName)"
+extension PhotoTableViewController {
+    
+    func setUpTableView() {
         tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoCell")
-        fillPhotos(from: albumId)
     }
     
-    private func fillPhotos(from albumId: Int) {
-        NetworkService.shared.getPhotos(albumId: albumId) { photos, error in
-            if let photos = photos {
-                self.photos = photos
-                self.tableView.reloadData()
-                return
-            } else {
-                self.showErrorAlert()
-                return
-            }
-        }
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photos.count
     }
@@ -55,17 +43,6 @@ class PhotoTableViewController: UITableViewController {
             if let data = data {
                 self.performSegue(withIdentifier: "photoToDetail",
                                   sender: (photo: UIImage(data: data), name: photo.title))
-            }
-        }
-    }
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinatinVC = segue.destination as? DetailsViewController {
-            if let info = sender as? (photo: UIImage, name: String) {
-                destinatinVC.photo = info.photo
-                destinatinVC.name = info.name
             }
         }
     }
