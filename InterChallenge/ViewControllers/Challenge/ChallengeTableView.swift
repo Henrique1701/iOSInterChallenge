@@ -11,7 +11,8 @@ import UIKit
 extension ChallengeTableViewController {
     
     func setUpTableView() {
-        tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCell")
+        tableView.register(UserTableViewCell.self, forCellReuseIdentifier: "UserCell")
+        tableView.estimatedRowHeight = 233
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
