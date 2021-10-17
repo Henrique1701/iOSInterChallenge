@@ -24,7 +24,7 @@ extension AlbumTableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as? AlbumTableViewCell else {
             return UITableViewCell()
         }
-        print("===================")
+        
         let album = albums[indexPath.row]
         cell.albumNameLabel.text = album.title
 
